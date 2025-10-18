@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Congress Trades Bot</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Karson's Portfolio</a>
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="project-page">
+        <section class="project-hero">
+    <h1>Congress Trade Tracker and Notifier</h1>
+    <p class="subtitle">A bot that identifies profitable trading opportunities through a three-step process:</p>
+
+    <!-- NEW STEPS GRID LAYOUT -->
+    <div class="steps-grid">
+        <div class="step">
+            <h3>Step 1: Scrape Data</h3>
+            <p>Scrapes all senator's trades every day to gather raw data (eg. price, traded date, size, etc ).</p>
+        </div>
+        <div class="step">
+            <h3>Step 2: Apply Filters</h3>
+            <p>Applies filters to each trade and categorizes them in three tiers. Considering factors like reporting lag, number of politicians involved etc.</p>
+        </div>
+        <div class="step">
+            <h3>Step 3: Notify Users</h3>
+            <p>Sends a notification when a trade is identified with a high probability of being profitable, delivering actionable insights.</p>
+        </div>
+    </div>
+
+</section>
+        
+        <section class="project-content">
+            <div class="project-section">
+                <h2>The "Proof" - From Alert to Profit</h2>
+                <p>One of the bot's alerts directly led to a significant return when Google's stock jumped 13% following a favorable court ruling. This section demonstrates the real-world value and effectiveness of the tool.</p>
+                <img src="image/stockTrade3.png" alt="Proof of bot's effectiveness" class="project-image">
+                <img src="image/stockTradewin.png" alt="Proof of bot's effectiveness" class="project-image">
+                <p class="caption"> Google rose 13 percent after a month when they won a court case letting them keep Chrome</p>
+            </div>
+            
+            <div class="project-section">
+                <h2>The Problem It Solves</h2>
+                <p>Retail investors are often at an information disadvantage. This bot levels the playing field by providing real-time access to valuable public data on congressional stock trades, delivered conveniently through Discord.</p>
+            </div>
+
+            <div class="project-section">
+                <h2>Features & Functionality</h2>
+                <div class="features-grid">
+                    <div class="feature-item"><i class="fas fa-bell"></i> Real-time trade notifications</div>
+                    <div class="feature-item"><i class="fas fa-search"></i> Look up a member's history</div>
+                    <div class="feature-item"><i class="fas fa-chart-line"></i> Check trades for a specific stock</div>
+                    <div class="feature-item"><i class="fas fa-link"></i> Direct links to filings</div>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h2>Technical Stack</h2>
+                <ul class="tech-stack">
+                    <li><strong>Language:</strong> Node.js</li>
+                    <li><strong>Library:</strong> Discord.js</li>
+                    <li><strong>APIs:</strong> Public APIs for financial and congressional data</li>
+                    <li><strong>Hosting:</strong> Heroku / AWS</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Karson Chen. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

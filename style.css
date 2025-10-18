@@ -1,0 +1,809 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* General Styling */
+/* General Styling */
+:root {
+    --primary-color: #8B4513; /* A warm, earthy brown */
+    --secondary-color: #2F2F2F; /* A dark, soft charcoal for text */
+    --background-color: #FDFBF5; /* A beautiful warm cream */
+    --text-color: #4A4A4A; /* A slightly softer text color */
+    --light-gray: #EAE7E2; /* A complementary light accent */
+}
+/* --- NEW MINIMALIST HERO SECTION STYLES --- */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative; /* Crucial for positioning the shapes */
+    overflow: hidden; /* Keeps the shapes from spilling out */
+    background-color: var(--background-color); /* Our new cream color */
+    padding: 60px 20px;
+}
+
+.hero-text-container {
+    position: relative; /* Ensures text is on top of shapes */
+    z-index: 2;
+    max-width: 700px;
+    /* Animate the text fading in */
+    animation: fadeInText 1.5s ease-out forwards;
+}
+
+@keyframes fadeInText {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+/* --- THE INTERESTING BACKGROUND DESIGNS --- */
+.background-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%; /* Makes them circles */
+    background-color: var(--light-gray); /* A subtle color for the shapes */
+    opacity: 0.6;
+    animation: float 20s infinite linear;
+}
+
+/* Define the size and position of each shape */
+.shape-1 {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    left: 15%;
+    animation-duration: 25s; /* Varying speeds */
+}
+
+.shape-2 {
+    width: 100px;
+    height: 100px;
+    top: 60%;
+    right: 20%;
+    animation-duration: 20s;
+    animation-delay: -5s; /* Varying start times */
+}
+
+.shape-3 {
+    width: 150px;
+    height: 150px;
+    bottom: 5%;
+    left: 40%;
+    animation-duration: 30s;
+    animation-delay: -10s;
+}
+
+/* The floating animation for the shapes */
+@keyframes float {
+    0% { transform: translateY(0) translateX(0) rotate(0deg); }
+    25% { transform: translateY(-20px) translateX(15px) rotate(90deg); }
+    50% { transform: translateY(10px) translateX(-20px) rotate(180deg); }
+    75% { transform: translateY(-15px) translateX(10px) rotate(270deg); }
+    100% { transform: translateY(0) translateX(0) rotate(360deg); }
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+h1, h2, h3 {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+section {
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* Header & Navigation */
+header {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 70px;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    display: block;
+    background: var(--secondary-color);
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.btn-secondary:hover {
+    background: #495057;
+}
+
+/* About Section */
+.about {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+
+}
+/* In your "About Section" styles */
+
+.about h2 {
+    position: relative; /* This is needed to position the line relative to the h2 */
+    padding-bottom: 20px; /* Add some space below the text for the line */
+    margin-bottom: 30px; /* Adjust margin to control space below the line */
+}
+
+/* This creates the line using a "pseudo-element" */
+.about h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Position the line at the bottom of the h2 */
+    left: 50%; /* Start the line in the center */
+    transform: translateX(-50%); /* Perfectly center the line */
+    
+    width: 80px; /* The length of the line */
+    height: 2px; /* The thickness of the line */
+    background-color: var(--primary-color); /* Use your primary brown color for a nice accent */
+}
+.about p {
+    font-size: 1.3rem; 
+    line-height: 1.8;  
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.skills span {
+    background: var(--light-gray);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* Projects Section */
+.projects {
+    background: #fff;
+}
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: var(--background-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.project-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+
+.project-1 img {
+    object-position: center; 
+
+}
+
+.project-2 img {
+    object-position: 25% 50%; /* Example: Focuses 25% from the left and vertically centered */
+}
+
+.project-3 img {
+    object-position: center;
+    object-fit: cover;
+}
+
+
+.project-card h3, .project-card p, .project-card .project-tags {
+    padding: 0 20px;
+}
+
+.project-card h3 {
+    margin-top: 15px;
+}
+
+.project-card p {
+    flex-grow: 1;
+}
+
+.project-tags {
+    padding-bottom: 15px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.project-tags span {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+}
+
+.project-card .btn-secondary {
+    margin: 20px;
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    margin-bottom: 30px;
+}
+
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+.social-links i {
+    margin-right: 8px;
+}
+
+/* ===== BLOG PAGE ===== */
+.blog-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.blog-hero {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.blog-hero h1 {
+  margin: 0 0 8px;
+}
+.blog-hero p {
+  color: #6c757d;
+  margin: 0;
+}
+
+/* Blog grid/cards */
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.blog-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.blog-card-content {
+  padding: 16px 18px 18px;
+}
+
+.blog-card h2 {
+  font-size: 1.25rem;
+  margin: 6px 0 6px;
+}
+
+.blog-date {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 0 0 8px;
+}
+
+.blog-excerpt {
+  margin: 0 0 14px;
+}
+
+.read-more {
+  margin-top: auto;
+  align-self: flex-start;
+  background: var(--primary-color);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color .2s ease, transform .2s ease;
+}
+.read-more:hover {
+  background: #6f3610;
+  transform: translateY(-1px);
+}
+
+/* Active link state for Blog in nav */
+nav ul li a.active {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Small tweaks on mobile */
+@media (max-width: 768px) {
+  .blog-page { padding: 40px 20px; }
+  .blog-card img { height: 160px; }
+}
+/* === Blog Post Styling === */
+.blog-post-container {
+  max-width: 800px;  /* Sets a comfortable reading width */
+  margin: 40px auto; /* Centers the container on the page */
+  padding: 0 20px;   /* Adds space on the sides for smaller screens */
+}
+
+.blog-post-container h1 {
+  font-size: 2.5em; /* Makes the title stand out */
+  margin-bottom: 0.5em;
+}
+
+.blog-post-container .post-meta {
+  color: #666;
+  margin-bottom: 2em;
+  font-style: italic;
+}
+
+.blog-post-container .post-content {
+  line-height: 1.7;    /* Increases space between lines for readability */
+  font-size: 1.1em;
+}
+
+.blog-post-container img {
+  max-width: 100%;     /* Ensures images don't overflow the container */
+  height: auto;
+  margin: 2em 0;     /* Adds space above and below the image */
+  border-radius: 8px;
+}
+
+.back-to-blog {
+  display: inline-block;
+  margin-top: 2em;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-to-blog:hover {
+  text-decoration: underline;
+}
+/* Footer */
+footer {
+    background: var(--secondary-color);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* --- Project Page Specific Styles --- */
+.project-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.project-hero {
+    text-align: center;
+    padding: 40px 0;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.project-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.project-hero .subtitle {
+    font-size: 1.2rem;
+    color: #6c757d;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.project-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-code {
+    display: inline-block;
+    background: #fff;
+    color: var(--secondary-color);
+    border: 1px solid var(--light-gray);
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-code:hover {
+    background-color: var(--light-gray);
+    transform: translateY(-2px);
+}
+
+.project-content {
+    padding: 40px 0;
+}
+
+.project-section {
+    margin-bottom: 50px;
+}
+
+.project-section h2 {
+    text-align: left;
+    font-size: 2rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.project-image {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+.caption {
+    text-align: center;
+    font-style: italic;
+    color: #6c757d;
+    margin-top: 10px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.feature-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid var(--light-gray);
+}
+.feature-item i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.tech-stack {
+    list-style: none;
+    padding: 0;
+}
+.tech-stack li {
+    background: var(--light-gray);
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.testimonial {
+    background: var(--light-gray);
+    padding: 30px;
+    border-left: 5px solid var(--primary-color);
+    margin: 20px 0;
+    border-radius: 5px;
+}
+.testimonial p {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin: 0 0 10px 0;
+}
+.testimonial cite {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--primary-color);
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 24px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+    background: #0056b3;
+    transform: translateY(-5px);
+}
+
+/* --- Hamburger Menu & Mobile Navigation Styles --- */
+
+/* The hamburger icon itself */
+.hamburger-menu {
+    display: none; /* Hidden on desktop by default */
+    cursor: pointer;
+    z-index: 1001; /* Ensure it's on top */
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background: var(--secondary-color);
+    transition: all 0.3s ease-in-out;
+}
+
+/* The full-screen mobile menu overlay */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 100%; /* Start off-screen to the right */
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-color);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.4s ease-in-out;
+}
+
+.mobile-nav a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 20px 0;
+    transition: color 0.3s;
+}
+
+.mobile-nav a:hover {
+    color: var(--primary-color);
+}
+
+
+/* --- "Active" states, triggered by JavaScript --- */
+
+/* This class will be toggled on the body */
+.mobile-nav-active .mobile-nav {
+    left: 0; /* Slide the menu into view */
+}
+
+/* Animate the hamburger icon into an "X" */
+.mobile-nav-active .hamburger-menu span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.mobile-nav-active .hamburger-menu span:nth-child(2) {
+    opacity: 0;
+}
+.mobile-nav-active .hamburger-menu span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+/* --- Styling for the Project Steps Grid --- */
+
+.steps-grid {
+    display: grid;
+    /* This creates a responsive grid that will stack on smaller screens */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 900px; 
+    margin: 40px auto; /* Adds space above and below the grid */
+    text-align: left; /* Overrides the parent's center alignment for card content */
+}
+
+.step {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    /* A colored top border adds a nice design touch */
+    border-top: 4px solid var(--primary-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.step h3 {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.step p {
+    font-size: 0.95rem;
+    color: #6c757d; /* Softer text color for the description */
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+/* Responsive Design */
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* --- Navigation --- */
+    nav ul {
+        display: none; /* Hide the desktop nav links */
+    }
+    .hamburger-menu {
+        display: block; /* Show the hamburger menu icon */
+    }
+    
+    /* --- Typography --- */
+    h1, .hero h1 {
+        font-size: 2.5rem; /* Make hero and other h1s smaller */
+    }
+
+    h2 {
+        font-size: 2rem; /* Make section titles smaller */
+    }
+
+    .hero p {
+        font-size: 1.1rem; /* Adjust hero paragraph */
+    }
+
+    .about p {
+        font-size: 1rem; /* Adjust about paragraph to be closer to default */
+    }
+    
+    /* --- Spacing --- */
+    section {
+        padding: 40px 20px; /* Reduce top/bottom padding on sections */
+    }
+    
+    .project-grid {
+        gap: 20px; /* Reduce the gap between project cards */
+    }
+}

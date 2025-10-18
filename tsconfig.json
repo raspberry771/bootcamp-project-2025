@@ -1,0 +1,20 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    // File Layout - These are now active
+    "outDir": "./dist",
+
+    // Environment Settings
+    "module": "esnext", // Changed for browser compatibility
+    "target": "esnext",
+
+    // Other Outputs
+    "sourceMap": true,
+
+    // Recommended Options
+    "strict": true,
+    "skipLibCheck": true
+  },
+  // This new line tells TypeScript where to find your files
+  "include": ["src/**/*"]
+}

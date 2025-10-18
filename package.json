@@ -1,0 +1,24 @@
+{
+  "name": "karsonportfolio",
+  "version": "1.0.0",
+  "description": "This is the start of your 2025 bootcamp project!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raspberry771/karson-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raspberry771/karson-portfolio/issues"
+  },
+  "homepage": "https://github.com/raspberry771/karson-portfolio#readme",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

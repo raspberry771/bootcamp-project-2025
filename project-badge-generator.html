@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Karson Badge Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Karson's Portfolio</a>
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="project-page">
+        <section class="project-hero">
+            <h1>Karson Badge Generator</h1>
+            <p class="subtitle">A simple, intuitive web app that allows developers to create custom-styled badges for events.</p>
+            <div class="project-links">
+                <a href="https://karson-badge-generator.netlify.app/" target="_blank" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            </div>
+        </section>
+
+            <div class="project-section">
+                <h2>The Challenge & The Solution</h2>
+                <p>The main challenge was generating the badge graphic dynamically on the client-side without a backend. I solved this by using SVG templates that are manipulated with JavaScript, ensuring fast performance and providing an instant preview for the user as they type and drag elements across a canvas. I also had to make sure it reads the Excel sheets headers correctly and create elements from it. Then the user inputs background image and logo image into a draggable canvas for custom adjustments. </p>
+            </div>
+
+            <div class="project-section">
+                <h2>Key Features</h2>
+                 <div class="features-grid">
+                    <div class="feature-item"><i class="fas fa-eye"></i> Real-time badge preview</div>
+                    <div class="feature-item"><i class="fas fa-palette"></i> Customizable colors and text</div>
+                    <div class="feature-item"><i class="fas fa-code"></i> Easy-to-copy Markdown</div>
+                    <div class="feature-item"><i class="fas fa-mobile-alt"></i> Fully responsive design</div>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h2>Technical Stack</h2>
+                <ul class="tech-stack">
+                    <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript</li>
+                    <li><strong>Hosting:</strong> Netlify</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Karson Chen. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

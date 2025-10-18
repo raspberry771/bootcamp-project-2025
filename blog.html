@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Karson Chen</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo">Karson's Portfolio</a>
+    <ul>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+    </ul>
+    <div class="hamburger-menu" id="hamburgerMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html#about">About</a>
+  <a href="index.html#projects">Projects</a>
+  <a href="index.html#contact">Contact</a>
+</div>
+
+<main class="blog-page">
+  <section class="blog-hero">
+    <h1>📝 Karson's Blog</h1>
+    <p>Thoughts, tutorials, and project deep dives</p>
+  </section>
+
+  <section class="blog-list">
+    <div id="blog-container" class="blog-container">
+      <!-- Blogs will be injected here by TypeScript -->
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Karson Chen. All rights reserved.</p>
+</footer>
+
+<script src="dist/blog.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerMenu = document.getElementById('hamburgerMenu');
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileNavLinks = mobileNav.querySelectorAll('a');
+
+    hamburgerMenu.addEventListener('click', function() {
+      document.body.classList.toggle('mobile-nav-active');
+    });
+
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        document.body.classList.remove('mobile-nav-active');
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
