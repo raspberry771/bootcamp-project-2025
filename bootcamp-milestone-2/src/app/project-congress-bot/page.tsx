@@ -48,7 +48,7 @@ export default function CongressBotPage() {
           </p>
           {/* Make sure your image path starts with a '/' to point to the 'public' folder */}
           <Image
-            src="/image/stockTrade3.png"
+            src="../image/stockTrade3.png"
             alt="Proof of bot's effectiveness"
             className="project-image"
             width={800} // Added width/height
