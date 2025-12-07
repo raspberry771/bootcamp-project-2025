@@ -1,0 +1,8 @@
+.footer {
+  background: var(--secondary-color);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  /* We add this to make sure it's at the bottom */
+  margin-top: auto; 
+}
