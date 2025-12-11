@@ -1,16 +1,36 @@
-# Developer Bootcamp 2025
-This is the start of your 2025 bootcamp project!
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-This repo will serve as a place to "turn in" your work. More info about bootcamp can be found on the [Developer Bootcamp 2025 Notion Page](https://www.notion.so/h4i/2025-Developer-Bootcamp-246197abf07b80d09944c01a3c4c9cd4?source=copy_link).
+## Getting Started
 
-As you work, be sure to make comments in your code both for your understanding and ours during review! Please do this reading on [code comments](https://stackoverflow.blog/2021/12/23/best-practices-for-writing-code-comments/)! When making commits, be sure to follow the requirements listed on this page regarding [Git Commits & Pull Requests](https://www.notion.so/h4i/Git-Commits-Pull-Requests-246197abf07b80edb9a0c7a45d01bbc8).
+First, run the development server:
 
-To submit your work, create a pull request from your own fork (DO NOT MERGE if you are able to). Fill out the pull request template before you pull, or your submission will be automatically rejected! This allows us to review your work in a reasonably quick manner.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-## Creating a PR:
-1. Push all changes to your fork
-2. Go to the "Pull requests" tab in your GitHub repo
-3. Create a pull request with your changes. Double-check the 'base repository' is the main bootcamp repo 'hack4impact-calpoly/bootcamp-project-2025'!
-4. Fill out the PR template description!
-5. Assign the engineering team as 'Reviewers'
-6. Link the milestone issue to the PR
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
